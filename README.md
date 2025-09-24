@@ -1,2 +1,2 @@
 # Daily-food-list-app
-SQLite database 
+SQLite database with add, edit and delete functions
