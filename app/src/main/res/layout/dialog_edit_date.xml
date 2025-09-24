@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sana (25.07.2025)"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/etDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hafta kuni (Payshanba)"
+        android:inputType="text"/>
+
+</LinearLayout>

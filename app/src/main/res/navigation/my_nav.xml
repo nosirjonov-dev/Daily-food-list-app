@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.dailyschedule.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addDateFragment"
+            app:destination="@id/addDateFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment">
+            <argument
+                android:name="dateId"
+                app:argType="integer" />
+            <argument
+                android:name="dateText"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/addDateFragment"
+        android:name="com.example.dailyschedule.fragments.AddDateFragment"
+        android:label="fragment_add_date"
+        tools:layout="@layout/fragment_add_date" />
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.dailyschedule.fragments.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" />
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.dailyschedule.fragments.TaskListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list" >
+        <action
+            android:id="@+id/action_taskListFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+</navigation>
